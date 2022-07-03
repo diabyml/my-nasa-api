@@ -1,0 +1,1 @@
+mongodb+srv://nasa-api:<password>@nasa-api.9kgpkne.mongodb.net/?retryWrites=true&w=majority
