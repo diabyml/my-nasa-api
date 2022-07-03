@@ -1,5 +1,6 @@
 const request = require("supertest");
 const app = require("../../app");
+const { loadPlanetsData } = require("../../models/planets.model");
 const { mongoConnect, mongoDisconnect } = require("../../services/mongo");
 
 // add this line to your package.json
@@ -14,6 +15,7 @@ describe("Launches API", () => {
   // Establish mongo connection before running tests
   beforeAll(async () => {
     await mongoConnect();
+    await loadPlanetsData();
   });
 
   // Disconnnect afte running tests
